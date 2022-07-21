@@ -1,0 +1,72 @@
+@use '../../scss/index' as *;
+
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  background-color: #111;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 25px;
+  .img-banner {
+    max-height: 200px;
+    z-index: 1;
+  }
+  .info {
+    width: 60%;
+    z-index: 1;
+    margin-left: 20px;
+
+    .title {
+      max-height: 80px;
+      overflow: hidden;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .nutrs-block {
+      display: flex;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding-left: 16px;
+      .nutr {
+        width: 50%;
+        li {
+          line-height: 25px;
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            left: -12px;
+            top: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+          }
+        }
+      }
+      .nutr-right {
+        .quantity {
+          float: right;
+          text-transform: lowercase;
+        }
+      }
+    }
+  }
+  .overlay-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111;
+    opacity: 0.7;
+  }
+}

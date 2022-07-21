@@ -1,0 +1,45 @@
+@use '../../scss/index' as *;
+
+.btn {
+  padding: 8px 20px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  svg {
+    font-size: 1.2rem;
+    color: $text-color;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: $main-color;
+  position: relative;
+  svg {
+    transition: color 0.2s ease;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to right, $main-color, #111);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+    svg {
+      color: #fff;
+    }
+  }
+}
+
+.btn-loadmore {
+  font-size: 1rem;
+  font-weight: 600;
+}

@@ -1,0 +1,118 @@
+@use '../../scss/index' as *;
+.card {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  .top {
+    display: flex;
+    padding: 30px 20px;
+    background-color: #fff;
+
+    .img-top {
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+    }
+
+    .info {
+      width: calc(100% - 150px);
+      padding-left: 20px;
+      .title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        height: 65px;
+        overflow: hidden;
+      }
+      .nutritions {
+        height: 150px;
+        overflow: hidden;
+
+        .item {
+          position: relative;
+          font-size: 0.8rem;
+
+          display: inline-block;
+          &::after {
+            content: '•';
+            font-weight: 600;
+          }
+          &:last-child::after {
+            content: '';
+          }
+        }
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    background-color: #f3f3f3;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    & > * {
+      width: 33.33333333%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .start {
+      text-align: center;
+      .quantity-servings {
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+      .calories-total {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $text-color;
+        .unit {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .center,
+    .end {
+      .digest {
+        font-size: 0.75rem;
+        li {
+          line-height: 25px;
+          span:last-child {
+            text-transform: lowercase;
+            float: right;
+            font-weight: 600;
+          }
+        }
+        &.nutr-left {
+          .protein,
+          .fat,
+          .carbs {
+            text-transform: uppercase;
+            position: relative;
+            &::before {
+              content: '';
+              position: absolute;
+              width: 8px;
+              height: 8px;
+              left: -12px;
+              top: 8px;
+              background-color: $text-color;
+              border-radius: 50%;
+            }
+          }
+          .protein::before {
+            background-color: #7aca25;
+          }
+          .fat::before {
+            background-color: #ffbe61;
+          }
+          .carbs::before {
+            background-color: #f14647;
+          }
+        }
+      }
+    }
+  }
+}

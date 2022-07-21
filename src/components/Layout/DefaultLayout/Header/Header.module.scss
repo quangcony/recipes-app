@@ -1,0 +1,17 @@
+@use '../../../../scss/index' as *;
+
+.header {
+  display: flex;
+  padding: 30px 0;
+  .logo {
+    width: 100%;
+    display: flex;
+    .img-logo {
+      height: 24px;
+    }
+    .text-logo {
+      margin-left: 3px;
+      font-weight: 800;
+    }
+  }
+}

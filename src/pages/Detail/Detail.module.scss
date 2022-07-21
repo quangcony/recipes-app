@@ -1,0 +1,122 @@
+@use '../../scss/variables' as *;
+.container {
+  max-width: 1220px;
+  margin: auto;
+}
+
+.recipe-content {
+  display: flex;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  margin-left: -12px;
+  margin-right: -12px;
+  .recipe {
+    width: 75%;
+    flex: 0 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    .img-recipe {
+      max-width: 300px;
+      position: relative;
+      padding: 10px;
+      .bd-top-left,
+      .bd-top-right,
+      .bd-bottom-left,
+      .bd-bottom-right {
+        position: absolute;
+        background-color: #111;
+        width: 20px;
+        height: 2px;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 2px;
+          height: 20px;
+          background-color: #111;
+        }
+      }
+      .bd-top-left {
+        top: 0;
+        left: 0;
+        &::before {
+          top: 0;
+          left: 0;
+        }
+      }
+      .bd-top-right {
+        top: 0;
+        right: 0;
+        &::before {
+          top: 0;
+          right: 0;
+        }
+      }
+      .bd-bottom-left {
+        bottom: 0;
+        left: 0;
+        &::before {
+          bottom: 0;
+          left: 0;
+        }
+      }
+      .bd-bottom-right {
+        bottom: 0;
+        right: 0;
+        &::before {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+    .rating {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      .start {
+        color: $main-color;
+      }
+    }
+    .ingredients {
+      margin-top: 20px;
+      .title {
+        position: relative;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 5px;
+          height: 100%;
+          background-color: $main-color;
+          border-radius: 10px;
+        }
+      }
+      .info {
+        table {
+          width: 100%;
+          font-size: 0.9rem;
+          th {
+            text-align: left;
+          }
+        }
+        .img-ingredient {
+          width: 80px;
+        }
+      }
+    }
+  }
+  .similar {
+    width: 25%;
+    flex: 0 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    .title {
+      margin-bottom: 20px;
+    }
+  }
+}
