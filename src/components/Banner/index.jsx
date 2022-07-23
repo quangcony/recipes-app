@@ -26,9 +26,9 @@ function Banner({ item }) {
             <li>Total time: {item.totalTime} minute</li>
           </ul>
           <ul className={cx('nutr', 'nutr-right')}>
-            {Object.keys(item.totalNutrients).map((key, i) => {
-              if (key.startsWith('VIT')) {
-                return (
+            {Object.keys(item.totalNutrients).map(
+              (key, i) =>
+                key.startsWith('VIT') && (
                   <li key={i}>
                     {item.totalNutrients[key].label}
                     <span className={cx('quantity')}>
@@ -36,9 +36,8 @@ function Banner({ item }) {
                         item.totalNutrients[key].unit}
                     </span>
                   </li>
-                )
-              }
-            })}
+                ),
+            )}
           </ul>
         </div>
       </div>
