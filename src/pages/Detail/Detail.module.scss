@@ -1,20 +1,27 @@
-@use '../../scss/variables' as *;
+@use '../../scss/index' as *;
 .container {
   max-width: 1220px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .recipe-content {
   display: flex;
-  margin-top: 50px;
-  padding-bottom: 50px;
+  margin-top: 4rem;
+  padding-bottom: 4rem;
   margin-left: -12px;
   margin-right: -12px;
+  @include mobile {
+    flex-direction: column;
+  }
+
   .recipe {
     width: 75%;
     flex: 0 0 auto;
     padding-left: 12px;
     padding-right: 12px;
+    @include mobile {
+      width: 100%;
+    }
     .img-recipe {
       max-width: 300px;
       position: relative;
@@ -115,6 +122,9 @@
     flex: 0 0 auto;
     padding-left: 12px;
     padding-right: 12px;
+    @include mobile {
+      width: 100%;
+    }
     .title {
       margin-bottom: 20px;
     }

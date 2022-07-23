@@ -11,6 +11,9 @@
     margin: 0 auto;
     margin-top: 20px;
     display: flex;
+    @include mobile {
+      margin-top: 10px;
+    }
     input {
       margin-right: 10px;
     }
@@ -23,6 +26,7 @@
       height: 40px;
       padding: 9px 12px;
       color: rgb(210, 204, 204);
+
       svg {
         font-size: 1rem;
       }
@@ -30,6 +34,9 @@
   }
   .nav {
     margin-top: 20px;
+    @include mobile {
+      margin-top: 10px;
+    }
     .nav-list {
       display: flex;
       .nav-item {
@@ -40,13 +47,18 @@
         background-image: linear-gradient(to right, rgb(64, 64, 64), #111);
         text-align: center;
         color: #fff;
-        font-size: 0.5rem;
         padding: 13px 0;
-        svg {
-          font-size: 0.8rem;
+        font-size: 0.5rem;
+        @include mobile {
+          width: 40px;
+          height: 40px;
         }
+
         & + .nav-item {
           margin-left: 20px;
+          @include mobile {
+            margin-left: 10px;
+          }
         }
         &.active {
           background-image: linear-gradient(to right, $main-color, #111);
@@ -54,14 +66,19 @@
         &:hover {
           color: $main-color;
         }
+        .icon {
+          @include mobile {
+            font-size: 0.8rem;
+          }
+        }
       }
     }
   }
 }
 
 .content-body {
-  margin-top: 30px;
-  padding-bottom: 80px;
+  margin-top: 2rem;
+  padding-bottom: 6rem;
   .section {
     margin-bottom: 20px;
     .title {
@@ -74,6 +91,10 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 30px;
+      @include mobile {
+        margin-top: 10px;
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
   }
   .loadmore {

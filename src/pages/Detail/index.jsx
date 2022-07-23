@@ -8,6 +8,7 @@ import edamamApi from '../../api/edamamApi'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import SimilarList from '../../components/SimilarList'
+import ScrollButton from '../../components/ScrollButton'
 
 const cx = classnames.bind(style)
 
@@ -29,7 +30,7 @@ function Detail() {
   return (
     <>
       {item && <Banner item={item} />}
-      <div className={cx('container')}>
+      <div className="container">
         {item && (
           <div className={cx('recipe-content')}>
             <div className={cx('recipe')}>
@@ -93,6 +94,7 @@ function Detail() {
           </div>
         )}
       </div>
+      <ScrollButton />
     </>
   )
 }

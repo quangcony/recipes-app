@@ -1,0 +1,13 @@
+@use '../../scss/variables' as *;
+.btn-gototop {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background-image: linear-gradient(to right, $main-color, rgba(0, 0, 0));
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: rgb(196, 196, 196);
+}

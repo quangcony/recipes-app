@@ -135,7 +135,7 @@ const RecipeGrid = () => {
                         : '/search/' + keyword + e.path
                     }
                   >
-                    <FontAwesomeIcon icon={e.icon} />
+                    <FontAwesomeIcon icon={e.icon} className={cx('icon')}/>
                     <p>{e.display}</p>
                   </Link>
                 </li>
@@ -193,6 +193,7 @@ const RecipeSearch = (props) => {
   const goToSearch = useCallback(() => {
     if (keyword.trim().length > 0) {
       navigate(`/search/${keyword}/`)
+      document.querySelector('[type="search"]').blur()
     }
   }, [keyword, navigate])
 
@@ -212,7 +213,7 @@ const RecipeSearch = (props) => {
   return (
     <>
       <Input
-        type="text"
+        type="search"
         placeholder="Search..."
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}

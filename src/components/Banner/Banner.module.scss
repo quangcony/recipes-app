@@ -11,14 +11,25 @@
   background-size: cover;
   background-position: center;
   padding: 25px;
+  @include mobile {
+    justify-content: space-between;
+    padding: 10px;
+  }
   .img-banner {
     max-height: 200px;
     z-index: 1;
+    @include mobile {
+      display: none;
+    }
   }
   .info {
     width: 60%;
     z-index: 1;
     margin-left: 20px;
+    @include mobile {
+      width: 100%;
+      margin-left: 0;
+    }
 
     .title {
       max-height: 80px;
@@ -26,6 +37,10 @@
       font-size: 3rem;
       font-weight: 700;
       color: #fff;
+      @include mobile {
+        max-height: 50px;
+        text-align: center;
+      }
     }
     .nutrs-block {
       display: flex;
@@ -53,6 +68,7 @@
         }
       }
       .nutr-right {
+        margin-left: 20px;
         .quantity {
           float: right;
           text-transform: lowercase;

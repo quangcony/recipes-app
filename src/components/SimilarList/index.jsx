@@ -14,6 +14,7 @@ function SimilarList({ dishType }) {
     const getList = async () => {
       const params = { dishType: dishType[0], random: true }
       const response = await edamamApi.getRecipeSimilar({ params })
+      console.log(response.hits)
       setItems(response.hits)
     }
     getList()

@@ -11,6 +11,9 @@
     display: flex;
     padding: 30px 20px;
     background-color: #fff;
+    @include tablet {
+      padding: 10px;
+    }
 
     .img-top {
       height: 150px;
@@ -24,11 +27,11 @@
       .title {
         font-size: 1.3rem;
         font-weight: 600;
-        height: 65px;
+        height: 5rem;
         overflow: hidden;
       }
       .nutritions {
-        height: 150px;
+        height: 11.5rem;
         overflow: hidden;
 
         .item {
@@ -53,10 +56,18 @@
     background-color: #f3f3f3;
     padding-top: 30px;
     padding-bottom: 40px;
+    @include mobile {
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
     & > * {
       width: 33.33333333%;
       padding-left: 20px;
       padding-right: 20px;
+      @include tablet {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
     .start {
       text-align: center;
